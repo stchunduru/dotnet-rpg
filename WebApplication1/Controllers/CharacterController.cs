@@ -44,7 +44,7 @@ namespace WebApplication1.Controllers
             return Ok(await _characterService.AddCharacter(newCharacter));
         }
 
-        [HttpPut]
+        [HttpPut("UpdateCharacter")]
         public async Task<ActionResult<ServiceResponse<List<GetCharacterDTO>>>> UpdatedCharacter(UpdatedCharacterDTO updateChar)
         {
             var response = await _characterService.UpdateCharacter(updateChar);
